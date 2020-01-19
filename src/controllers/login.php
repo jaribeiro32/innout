@@ -8,8 +8,8 @@ if (count($_POST) > 0) {
 
         $user = $login->checkLogin();
         echo "Há muleque #### Usuário {$user->name} logado";
-    }catch(Exception $e){
-        echo 'deu ruim';
+    }catch(AppException $e){
+        echo $e->getMessage();
     }
 }
 
